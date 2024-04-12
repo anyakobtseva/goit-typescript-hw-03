@@ -22,9 +22,9 @@ class Employee {constructor(public name: string, private department: string, pro
 }
 
 class Manager extends Employee {
-  constructor(){
-    super('name', 'dep', 20000);
-    this.salary += 10000;
+  constructor(public name: string, private department: string, protected salary: number){
+    super(name, department, salary+10000);
+   
   }
   // Реалізуйте конструктор та збільшіть salary на 10000
 }
